@@ -1,0 +1,24 @@
+<h1>Clean Tech Bin</h1>
+<div class="wrap">
+    <form>
+        <div class="inputs-wrap">
+            <div class="input">
+                <div>Email</div>
+                <input type="text" name="email" [(ngModel)]="email" placeholder="email"/>
+            </div>
+            <div class="input">
+                <div>Senha</div>
+                <input type="password" name="password" [(ngModel)]="password" placeholder="senha"/>
+            </div>
+            <div class="buttons">
+                <button (click)="emailSignin(email,password)">Login with email</button>
+                <button (click)="googleSignin()">Login with google</button>
+            </div>
+            <p>Ainda não tem cadastro? Clique <span (click)="goTo('./register')">aqui</span></p>
+        </div>
+    </form>
+</div>
+
+<div class="error" *ngIf="auth.error"> <!-- *ngIf="auth.error" -->
+    {{auth.error}}
+</div>
