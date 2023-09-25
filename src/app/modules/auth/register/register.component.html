@@ -1,0 +1,23 @@
+<h1>Registar</h1>
+<div class="wrap">
+    <form>
+        <div class="inputs-wrap">
+            <div class="input">
+                <div>Email</div>
+                <input type="text" name="email" [(ngModel)]="email" placeholder="email"/>
+            </div>
+            <div class="input">
+                <div>Senha</div>
+                <input type="password" name="password" [(ngModel)]="password" placeholder="senha"/>
+            </div>
+            <div class="buttons">
+                <button (click)="goTo('./login')">Voltar</button> <!-- (click)="auth.emailSignin(this.email, this.password)" -->
+                <button (click)="createUser(this.email,this.password)">Registrar</button> <!-- (click)="auth.emailSignin(this.email, this.password)" -->
+            </div>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="auth.error" style="color: red"> <!-- *ngIf="auth.error" -->
+    {{auth.error}}
+</div>

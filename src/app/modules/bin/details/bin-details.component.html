@@ -1,0 +1,26 @@
+<section>
+  <div class="title">
+      <i class="material-symbols-outlined"
+      [routerLink]="['../dashboard']">arrow_back_ios</i>
+      <h1>Editar Lixeira</h1>
+  </div>
+  <div class="wrap">
+      <div class="form">
+          <input type="text"
+              [(ngModel)]="code"
+              disabled>
+          <input type="text"
+              [(ngModel)]="name"
+              placeholder="Nome da Lixeira">
+          <input type="number"
+              [(ngModel)]="binHeight"
+              placeholder="altura da Lixeira (cm)">
+          <textarea name="" id="" cols="30" rows="5"
+              [(ngModel)]="description"
+              placeholder="Descrição da lixeira"></textarea>
+          </div>
+          <button (click)="save()"
+              class="cadastrar">salvar
+          </button>
+  </div>
+</section>
